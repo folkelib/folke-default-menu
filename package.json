@@ -1,0 +1,23 @@
+{
+  "name": "folke-default-menu",
+  "version": "1.0.0",
+  "description": "A default menu for folke-menu",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "typings install && tsc -p ."
+  },
+  "author": "Sidoine De Wispelaere",
+  "license": "MIT",
+  "repository": {
+    "url": "git@github.com:folkelib/folke-default-menu.git"
+  },
+  "dependencies": {
+    "folke-menu": "^1.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "typings": "^1.3.2"
+  }
+}

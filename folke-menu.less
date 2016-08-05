@@ -1,0 +1,94 @@
+﻿@menu-width: 200px;
+
+folke-menu {
+    width: @menu-width;
+    position:fixed;
+    right:0;
+    left:0;
+    top:0;
+    margin: 0;
+    
+    header{
+        background-color: @menu-background;
+        width: @menu-width;
+        color: @menu-text-color;
+        text-transform: uppercase;
+
+        .fa {
+            padding-right: 0.5em;
+        }
+    }
+   
+    a {
+        color: @menu-text-color;
+        text-decoration: none;
+        &:hover {
+            color: @menu-text-color-over;
+        }
+    }
+
+    > ul {
+        background-color: @menu-background;
+        margin:0;
+        width: @menu-width;
+        list-style: none;
+        padding: 5px;
+
+        > li{
+            display:block;
+            margin-left: 0;
+
+            a{
+                display: block;
+                padding: 3px;
+                height: 100%;
+                &:hover{
+                    background-color: @item-over;
+                }
+            }
+        }
+    }
+
+    .submenu {
+        button {
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            padding: 3px;
+            background: none;
+            border: none;
+            color: @menu-text-color;
+            font: inherit;
+            &:hover{
+                color: @menu-text-color-over;
+                background-color: @item-over;
+            }
+        }
+        ul {
+            list-style: none;
+            background-color: @menu-sub-background;
+            padding: 10px;
+            li{
+                margin:0;
+            }
+        }
+    }
+
+     @media screen and (max-width:415px) {
+        header.collapsed {
+            width: inherit;
+        }
+        > ul.collapsed {
+            display: none;
+        }
+    }
+}
+
+body{
+    @media screen and (min-width:416px) {
+        margin-left: @menu-width;
+    }
+    @media screen and (max-width:415px){
+       margin-top: 2em;
+    }
+}
