@@ -2,7 +2,7 @@
 import * as Menu from "folke-menu";
 
 class MenuButtonComponent {
-    public title: ko.Observable<string>;
+    public title: KnockoutObservable<string>;
     public action: () => void;
     constructor(params:Menu.MenuButton) {
         this.title = params.title;
@@ -11,7 +11,7 @@ class MenuButtonComponent {
 }
 
 class MenuRouteButtonComponent {
-    public title: ko.Observable<string>;
+    public title: KnockoutObservable<string>;
     public link: string;
     constructor(params: Menu.MenuRouteButton) {
         this.title = params.title;
@@ -20,9 +20,9 @@ class MenuRouteButtonComponent {
 }
 
 class SubMenuComponent {
-    public menu: ko.ObservableArray<Menu.MenuItem>;
-    public collapsed: ko.Observable<boolean>;
-    public title: ko.Observable<string>;
+    public menu: KnockoutObservableArray<Menu.MenuItem>;
+    public collapsed: KnockoutObservable<boolean>;
+    public title: KnockoutObservable<string> | null;
     constructor(params: Menu.SubMenu) {
         this.menu = params.menu;
         this.collapsed = params.collapsed;

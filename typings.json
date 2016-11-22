@@ -1,6 +1,0 @@
-{
-  "name": "folke-default-menu",
-  "dependencies": {
-    "knockout": "registry:npm/knockout#3.4.0+20160516171930"
-  }
-}
